@@ -1,32 +1,18 @@
-/* global describe, it, before */
-
+// https://devhints.io/chai
 import chai from 'chai';
-import {Cat, Dog} from '../lib/exert.js';
+import { Stream } from '../lib/exert';
 
-chai.expect();
-
+const assert = chai.assert;
 const expect = chai.expect;
 
-let lib;
+let ob;
 
-describe('Given an instance of my Cat library', () => {
+describe('Stream', () => {
   before(() => {
-    lib = new Cat();
+    ob = new Stream();
   });
-  describe('when I need the name', () => {
-    it('should return the name', () => {
-      expect(lib.name).to.be.equal('Cat');
-    });
+  it('should return the name', () => {
+    expect(ob.name).to.equal('test');
   });
 });
 
-describe('Given an instance of my Dog library', () => {
-  before(() => {
-    lib = new Dog();
-  });
-  describe('when I need the name', () => {
-    it('should return the name', () => {
-      expect(lib.name).to.be.equal('Dog');
-    });
-  });
-});

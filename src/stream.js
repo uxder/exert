@@ -1,9 +1,28 @@
+import mixin from './mixin';
+
 /**
- * An observable class.
+ * A stream class decorator.
  */
-class Stream {
-  constructor() {
-    this.name = 'test';
+const stream = (options)=> {
+  return function decorator(targetClass) {
+     return (...args) => {
+      let patchClass = mixin(targetClass, {
+        options: options,
+        // Initial properties decorated to to class.
+        properties: {
+          subscriptions: [],
+          name: 'test2'
+        },
+
+        // Methods decorated to class.
+        methods: {
+          test() {
+            return 'asana';
+          }
+        }
+      })
+     return new patchClass(...args);
+    }
   }
 }
-export default Stream;
+export default stream;

@@ -1,18 +1,20 @@
 // https://devhints.io/chai
 import chai from 'chai';
-import { Stream } from '../lib/exert';
 
+import TestStream from './lib/test-stream';
 const assert = chai.assert;
 const expect = chai.expect;
 
-let ob;
+let testStream;
 
-describe('Stream', () => {
+describe('Stream decorator', () => {
   before(() => {
-    ob = new Stream();
+    testStream = new TestStream();
   });
-  it('should return the name', () => {
-    expect(ob.name).to.equal('test');
+  it('should be decorated with a name', () => {
+    expect(testStream.yo).to.equal('shunta');
+    expect(testStream.name).to.equal('test2');
+    expect(testStream.test()).to.equal('asana');
   });
 });
 

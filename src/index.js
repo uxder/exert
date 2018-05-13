@@ -1,4 +1,4 @@
-import Stream from './stream.js';
+import stream from './stream.js';
 export {
-  Stream
+  stream
 };

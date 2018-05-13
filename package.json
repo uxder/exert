@@ -14,13 +14,9 @@
     "url": "https://github.com/uxder/exert.git"
   },
   "keywords": [
-    "webpack",
+    "observable",
     "es6",
-    "starter",
-    "library",
-    "universal",
-    "umd",
-    "commonjs"
+    "streams"
   ],
   "author": "Scott Murphy",
   "license": "MIT",

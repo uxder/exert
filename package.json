@@ -1,12 +1,11 @@
 {
   "name": "exert",
-  "version": "0.0.1",
-  "description": "A small dependency free observable javascript lib.",
+  "version": "0.0.2",
+  "description": "A small library to create watchable/observable classes with decorators",
   "main": "lib/exert.js",
   "scripts": {
     "build": "webpack --env dev && webpack --env build && npm run test",
     "dev": "webpack --progress --colors --watch --env dev",
-    "build-test": "npm run build && npm run test",
     "test": "mocha --require babel-core/register --colors ./test/*.spec.js",
     "test:watch": "mocha --require babel-core/register --colors -w ./test/*.spec.js"
   },
@@ -21,18 +20,16 @@
   ],
   "author": "Scott Murphy",
   "license": "MIT",
-  "bugs": {
-    "url": "https://github.com/krasimir/webpack-library-starter/issues"
-  },
   "homepage": "https://github.com/uxder/exert.git",
   "devDependencies": {
     "babel-cli": "6.26.0",
-    "babel-core": "6.26.0",
+    "babel-core": "^6.26.0",
     "babel-eslint": "8.0.3",
-    "babel-loader": "7.1.2",
+    "babel-loader": "^7.1.2",
     "babel-plugin-add-module-exports": "0.2.1",
     "babel-plugin-transform-decorators": "6.24.1",
-    "babel-plugin-transform-decorators-legacy": "^1.3.4",
+    "babel-plugin-transform-decorators-legacy": "1.3.4",
+    "babel-polyfill": "6.26.0",
     "babel-preset-env": "1.6.1",
     "babel-preset-es2015": "6.24.1",
     "babel-preset-stage-0": "6.24.1",

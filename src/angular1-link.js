@@ -19,7 +19,9 @@
 const angular1Link = ({stores, scope}) => {
   for (var key in stores) {
     stores[key].watch(()=> {
-      scope.$digest();
+      window.setTimeout(()=> {
+        scope.$digest();
+      })
     })
   }
 }

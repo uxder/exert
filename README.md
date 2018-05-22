@@ -46,9 +46,7 @@ class MyWatchable {
 ```
 
 In the above, we use @change and @changeAsync decorators to publish out to subscribers.
-Generally any changes to public properties should be changed via
-a method decorated with @change or @changeAsync so that subscribers are correctly
-called.
+Generally any changes to public properties should be changed via a method decorated with @change or @changeAsync so that subscribers are correctly called.
 
 Now that we have setup our class, we are ready to instantiate it and start
 subscribing/watching the class.
@@ -99,5 +97,7 @@ npm install
 * `yarn test` or `npm run test` - Run tests
 * `yarn test:watch` or `npm run test:watch` - Run tests and watch.
 
+To publish:
+`npm publish`
 
 

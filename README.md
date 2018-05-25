@@ -65,7 +65,7 @@ let onUpdate = (current, prev)=> {
 // made.
 myWatchable.watch(onUpdate);
 
-// Subscribe and immidiately calls onUpdate.
+// Subscribe and immediately calls onUpdate.
 myWatchable.watchNow(onUpdate);
 
 // Make a change.
